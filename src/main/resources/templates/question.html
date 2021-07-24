@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Questions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"/>
+
+    <style>
+.container {
+  display: flex;
+  flex-direction: column;
+   height: 100%;
+}
+.content {
+  flex-grow: 1;
+}
+
+.but {
+  height: 200px;
+  width: 100%;
+}
+
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+#next-button {
+  display: none;
+}
+#eng {
+  display: none;
+}
+
+
+
+    </style>
+    <script>                        // A script of js code
+function myFunction() {
+    console.log("yes");
+    document.getElementById("eng").style.display="block";
+    document.getElementById("next-button").style.display="block";
+    document.getElementById("show-button").style.display="none";
+}
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div id="rus">
+            <h2 th:text="${rus}" style="font-size: 8rem"></h2>
+        </div>
+        <div id="eng">
+            <h2 th:text="${eng}" style="font-size: 8rem"></h2>
+        </div>
+    </div>
+
+    <div>
+        <div id="next-button" class="but">
+            <form class="row g-3" action="/q">
+                <button type="submit" class="btn btn-primary mb-3 but">Next</button>
+            </form>
+        </div>
+        <div id="show-button" class="but">
+            <button type="submit" onclick="myFunction()" class="btn btn-primary mb-3 but">Show</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

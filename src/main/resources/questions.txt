@@ -1,0 +1,55 @@
+What is JAVA?
+What are the features of JAVA?
+How does Java enable high performance?
+Name the Java IDE’s?
+What do you mean by Constructor?
+What is meant by the Local variable and the Instance variable?
+What is a Class?
+What is an Object?
+What are the OOPs concepts?
+What is Inheritance?
+What is Encapsulation?
+What is Polymorphism?
+What is meant by Method Overriding?
+What is meant by Overloading?
+What is meant by Interface?
+What is meant by Abstract class?
+Difference between Array and Array List.
+Difference between String, String Builder, and String Buffer.
+Explain about Public and Private access specifiers.
+Difference between Default and Protected access specifiers.
+Difference between HashMap and HashTable.
+Difference between HashSet and TreeSet.
+Difference between Abstract class and Interface.
+What are all the Classes and Interfaces that are available in the collections?
+What is meant by Ordered and Sorted in collections?
+Explain the different lists available in the collection.
+Explain about Set and their types in a collection.
+Explain about Map and its types.
+Explain the Priority Queue.
+What is meant by Exception?
+What are the types of Exceptions?
+What are the different ways to handle exceptions?
+What are the advantages of Exception handling?
+What are the Exception handling keywords in Java?
+Explain about Exception Propagation.
+What is the final keyword in Java?
+What is a Thread?
+How do you make a thread in Java?
+Explain about join () method.
+What does the yield method of the Thread class do?
+Explain about wait () method.
+Difference between notify() method and notifyAll() method in Java.
+How to stop a thread in java? Explain about sleep () method in a thread?
+When to use the Runnable interface Vs Thread class in Java?
+Difference between start() and run() method of thread class.
+What is Multi-threading?
+Explain the thread life cycle in Java.
+What is Synchronization?
+What is the disadvantage of Synchronization?
+What is meant by Serialization?
+What is the purpose of a transient variable?
+Which methods are used during the Serialization and Deserialization process?
+What is the purpose of a Volatile Variable?
+Difference between Serialization and Deserialization in Java.
+What is SerialVersionUID?

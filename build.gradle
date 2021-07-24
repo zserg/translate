@@ -1,0 +1,45 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'com.google.cloud.tools.jib' version '3.0.0'
+}
+
+group = 'ru.zserg'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '10'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.1'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+jib {
+	from {
+		image = 'openjdk:11.0.11-jre'
+	}
+	to {
+		image = 'docker.io/zserg/translate'
+		credHelper = 'pass'
+		tags = ['0.1', 'latest']
+	}
+	container {
+		jvmFlags = ['-Dmy.property=example.value', '-Xms512m', '-Xdebug']
+		mainClass = 'ru.zserg.translate.TranslateApplication'
+		format = 'Docker'
+	}
+}
